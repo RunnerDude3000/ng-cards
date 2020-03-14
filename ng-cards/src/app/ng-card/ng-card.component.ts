@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+/*tslint:disable */
+import { Component, OnInit, Input, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'ng-card',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ng-card.component.scss']
 })
 export class NgCardComponent implements OnInit {
+
+  @Input() cardImage = '';
+  @Input() cardTitle = '';
+  @Input() cardBodyText = '';
 
   constructor() { }
 

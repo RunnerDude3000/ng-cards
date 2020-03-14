@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng-cards';
+  cardImage = 'name-of-the-wind.jpg';
+  cardTitle = 'Sample Card';
+  cardBodyText = 'Did you know that everyone who likes the Name of the Wind is awesome?';
 }

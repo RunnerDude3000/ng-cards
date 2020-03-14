@@ -1,7 +1,6 @@
-
 <div class="ng-card">
-  <div class="ng-card-image">
+    <div *ngIf="cardImage !== ''" class="ng-card-image" [style.background]="'url(' + cardImage + ')'"></div>
+  <div class="ng-card-body">
 
   </div>
-
 </div>
