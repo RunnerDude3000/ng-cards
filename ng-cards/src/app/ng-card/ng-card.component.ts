@@ -1,5 +1,6 @@
 /*tslint:disable */
 import { Component, OnInit, Input, TemplateRef } from '@angular/core';
+import { CardConfig } from './models/card-config';
 
 @Component({
   selector: 'ng-card',
@@ -8,9 +9,7 @@ import { Component, OnInit, Input, TemplateRef } from '@angular/core';
 })
 export class NgCardComponent implements OnInit {
 
-  @Input() cardImage = '';
-  @Input() cardTitle = '';
-  @Input() cardBodyText = '';
+  @Input() cardConfig = new CardConfig();
 
   constructor() { }
 

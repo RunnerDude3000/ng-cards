@@ -1,6 +1,7 @@
 <div class="ng-card">
-    <div *ngIf="cardImage !== ''" class="ng-card-image" [style.background]="'url(' + cardImage + ')'"></div>
+    <div *ngIf="cardConfig.cardImage !== ''" class="ng-card-image" [style.background]="'url(' + cardConfig.cardImage + ')'"></div>
   <div class="ng-card-body">
-
+    <h4>{{cardConfig.cardTitle}}</h4>
+    <p>{{cardConfig.cardBodyText}}</p>
   </div>
 </div>
