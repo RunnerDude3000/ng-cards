@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NgCardComponent } from './ng-card.component';
 
 export * from './models/card-config';
+export * from './models/card';
 export * from './ng-card.component';
 
 @NgModule({
