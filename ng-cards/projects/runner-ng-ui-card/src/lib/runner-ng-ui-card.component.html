@@ -1,0 +1,13 @@
+<div class="runner-ng-card">
+    <ng-container *ngIf="!cardConfig.customCardTemplate; else customCard">
+        <div *ngIf="cardConfig.card.cardImage !== ''" class="runner-ng-card-image"
+            [style.background]="'url(' + cardConfig.card.cardImage + ')'"></div>
+        <div class="runner-ng-card-body">
+            <h4>{{cardConfig.card.cardTitle}}</h4>
+            <p>{{cardConfig.card.cardBodyText}}</p>
+        </div>
+    </ng-container>
+    <ng-template #customCard>
+        <ng-container *ngTemplateOutlet="cardTemplate"></ng-container>
+    </ng-template>
+</div>

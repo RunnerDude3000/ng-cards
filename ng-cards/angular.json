@@ -123,6 +123,46 @@
           }
         }
       }
+    },
+    "runner-ng-ui-card": {
+      "projectType": "library",
+      "root": "projects/runner-ng-ui-card",
+      "sourceRoot": "projects/runner-ng-ui-card/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/runner-ng-ui-card/tsconfig.lib.json",
+            "project": "projects/runner-ng-ui-card/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/runner-ng-ui-card/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/runner-ng-ui-card/src/test.ts",
+            "tsConfig": "projects/runner-ng-ui-card/tsconfig.spec.json",
+            "karmaConfig": "projects/runner-ng-ui-card/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/runner-ng-ui-card/tsconfig.lib.json",
+              "projects/runner-ng-ui-card/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ng-cards",

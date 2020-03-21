@@ -1,13 +1,12 @@
 import { Component, OnInit, Input, TemplateRef } from '@angular/core';
 import { CardConfig } from './models/card-config';
-import { Card } from './models/card';
 
 @Component({
-  selector: 'ng-card',
-  templateUrl: './ng-card.component.html',
-  styleUrls: ['./ng-card.component.scss']
+  selector: 'runner-ng-ui-card',
+  templateUrl: './runner-ng-ui-card.component.html',
+  styleUrls: ['./runner-ng-ui-card.component.scss']
 })
-export class NgCardComponent implements OnInit {
+export class RunnerNgUiCardComponent implements OnInit {
 
   @Input() cardConfig = new CardConfig();
   @Input() cardTemplate: TemplateRef<any>;

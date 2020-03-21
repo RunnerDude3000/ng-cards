@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "runner-ng-ui-card": [
+        "dist/runner-ng-ui-card/runner-ng-ui-card",
+        "dist/runner-ng-ui-card"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

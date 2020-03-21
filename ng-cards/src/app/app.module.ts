@@ -1,16 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
-import { CardUiModule } from './ng-card/card-ui.module';
+import { RunnerNgUiCardModule } from 'runner-ng-ui-card';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
-    CardUiModule
+    RunnerNgUiCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

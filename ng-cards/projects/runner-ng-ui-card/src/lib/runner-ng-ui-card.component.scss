@@ -1,4 +1,4 @@
-.ng-card {
+.runner-ng-card {
   display: flex;
   flex-flow: column;
   height: 350px;
@@ -6,14 +6,14 @@
   box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.ng-card-image {
+.runner-ng-card-image {
   width: 100%;
   height: 100%;
   border-top-left-radius: .25rem;
   border-top-right-radius: .25rem;
 }
 
-.ng-card-body {
+.runner-ng-card-body {
   display: flex;
   flex-flow: column;
   padding: 0.5rem;

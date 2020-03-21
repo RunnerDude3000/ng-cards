@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgCardComponent } from './ng-card.component';
+import { RunnerNgUiCardComponent } from './runner-ng-ui-card.component';
 
-describe('NgCardComponent', () => {
-  let component: NgCardComponent;
-  let fixture: ComponentFixture<NgCardComponent>;
+describe('RunnerNgUiCardComponent', () => {
+  let component: RunnerNgUiCardComponent;
+  let fixture: ComponentFixture<RunnerNgUiCardComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgCardComponent ]
+      declarations: [ RunnerNgUiCardComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgCardComponent);
+    fixture = TestBed.createComponent(RunnerNgUiCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

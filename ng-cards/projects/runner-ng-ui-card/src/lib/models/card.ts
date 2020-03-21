@@ -1,4 +1,3 @@
-
 export class Card {
     constructor(card?: Partial<Card>) {
         Object.assign(this, card);
