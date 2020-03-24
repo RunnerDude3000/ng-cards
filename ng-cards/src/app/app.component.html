@@ -1,2 +1,28 @@
-<runner-ng-ui-card [cardConfig]="cardConfig"></runner-ng-ui-card>
+<div class="card-layout-container">
+    <div class="card-config-container">
+        <h2>Default Card Template</h2>
+        <runner-ng-ui-card [cardConfig]="cardConfig"></runner-ng-ui-card>
+    </div>
+    <div class="custom-card-config-container">
+        <h2>Custom Card Template</h2>
+        <runner-ng-ui-card [cardConfig]="customCardConfig" [cardTemplate]="customCardTemplate"></runner-ng-ui-card>
+    </div>
+</div>
 
+<ng-template #customCardTemplate>
+    <div class="custom-card-body">
+        <h4>Customized Card</h4>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna
+            aliqua. Volutpat odio facilisis mauris sit. Proin sagittis nisl rhoncus mattis. Tincidunt lobortis feugiat
+            vivamus at.
+            Gravida cum sociis natoque penatibus et magnis dis. Volutpat est velit egestas dui id ornare arcu odio. Nibh
+            mauris
+            cursus mattis molestie a. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Massa
+            sed elementum
+            tempus egestas sed sed risus pretium quam. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus
+            iaculis.
+        </p>
+    </div>
+</ng-template>

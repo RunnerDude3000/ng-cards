@@ -10,10 +10,15 @@ import { Card } from 'runner-ng-ui-card';
 export class AppComponent {
   cardConfig = new CardConfig({
     card: new Card({
-      cardImage: '../assets/name-of-the-wind.jpg',
-      cardTitle: 'Sample Card',
-      cardBodyText: 'Did you know that everyone who likes the Name of the Wind is awesome?'
-    }),
-    customCardTemplate: false
+      cardImage: '../assets/cdpr-logo.png',
+      cardTitle: 'CD Projekt Red',
+      cardBodyText: 'CD Projekt Red is a game development company. Their most notable game series is the Witcher;' +
+      ' a fantasy game genre based on the books by Andrzej Sapkowski. In 2020, they plan to release another highly' +
+      ' anticipated game: Cyberpunk 2077.'
+    })
+  });
+
+  customCardConfig = new CardConfig({
+    customCardTemplate: true
   });
 }

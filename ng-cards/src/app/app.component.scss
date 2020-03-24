@@ -1,0 +1,23 @@
+
+.card-layout-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-config-container {
+    width: 350px;
+}
+
+.custom-card-config-container {
+    width: 350px;
+}
+
+/*********************************
+Custom Card Template Styles
+*********************************/
+.custom-card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    height: 100%;
+}
