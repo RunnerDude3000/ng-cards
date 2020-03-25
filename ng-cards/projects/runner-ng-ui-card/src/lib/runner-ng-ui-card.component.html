@@ -5,6 +5,10 @@
         <div class="runner-ng-card-body">
             <h4>{{cardConfig.card.cardTitle}}</h4>
             <p>{{cardConfig.card.cardBodyText}}</p>
+            <button *ngIf="cardConfig.card.cardButton" class="runner-ng-card-button"
+                [style.background-color]="cardConfig.card.cardButton.cardButtonColor"
+                [style.color]="cardConfig.card.cardButton.cardButtonTextColor"
+                (click)="cardConfig.card.cardButton.cardButtonCallback()">{{cardConfig.card.cardButton.cardButtonText}}</button>
         </div>
     </ng-container>
     <ng-template #customCard>
