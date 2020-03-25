@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-// import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { RunnerNgUiCardModule } from 'runner-ng-ui-card';
 
@@ -12,7 +11,6 @@ import { RunnerNgUiCardModule } from 'runner-ng-ui-card';
   imports: [
     CommonModule,
     BrowserModule,
-    // RouterModule,
     RunnerNgUiCardModule
   ],
   providers: [],

@@ -30,14 +30,4 @@ export class AppComponent {
     customCardTemplate: true
   });
 
-  constructor() {}
-
-  // onCardButtonPressed() {
-  //   window.location.href = 'https://en.cdprojektred.com/';
-  //   // this.router.navigate(['https://en.cdprojektred.com/']).then(() => {
-  //   //   console.log('navigated successfully');
-  //   // }).catch((error) => {
-  //   //   console.log(error);
-  //   // });
-  // }
 }
