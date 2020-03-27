@@ -4,6 +4,7 @@ import { RunnerNgUiCardComponent } from './runner-ng-ui-card.component';
 import { CardConfig } from './models/card-config';
 import { Card } from './models/card';
 import { By } from '@angular/platform-browser';
+import { CardButton } from './models/card-button';
 
 describe('RunnerNgUiCardComponent', () => {
   let component: RunnerNgUiCardComponent;
@@ -22,7 +23,7 @@ describe('RunnerNgUiCardComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create the runner-ng-ui-card component', () => {
     expect(component).toBeTruthy();
   });
 
@@ -65,4 +66,47 @@ describe('RunnerNgUiCardComponent', () => {
     expect(cardBodyTextElem.nativeElement.textContent).toBe(bodyText);
   });
 
+  it('should display the supplied card button if a card button is defined in the CardConfig', () => {
+    const buttonText = 'Card Button';
+    const buttonColor = 'rgb(47, 47, 47)';
+    const buttonTextColor = 'rgb(255, 255, 255)';
+    component.cardConfig = new CardConfig({
+      card: new Card({
+        cardButton: new CardButton({
+          cardButtonText: buttonText,
+          cardButtonColor: buttonColor,
+          cardButtonTextColor: buttonTextColor,
+          cardButtonCallback: () => {
+            console.log('button clicked');
+          }
+        })
+      })
+    });
+    fixture.detectChanges();
+    const runnerNgCardButtonElem = fixture.debugElement.query(By.css('.runner-ng-card-button'));
+    expect(runnerNgCardButtonElem).toBeTruthy();
+    expect(getComputedStyle(runnerNgCardButtonElem.nativeElement).backgroundColor).toContain(buttonColor);
+    expect(getComputedStyle(runnerNgCardButtonElem.nativeElement).color).toContain(buttonTextColor);
+    expect(runnerNgCardButtonElem.nativeElement.textContent).toBe(buttonText);
+  });
+
+  it('should call the button callback attached to the CardButton when the button is clicked', async(() => {
+    component.cardConfig = new CardConfig({
+      card: new Card({
+        cardButton: new CardButton({
+          cardButtonCallback: () => {
+            console.log('button clicked');
+          }
+        })
+      })
+    });
+    spyOn(component.cardConfig.card.cardButton, 'cardButtonCallback');
+    fixture.detectChanges();
+    const runnerNgCardButtonElem = fixture.debugElement.query(By.css('.runner-ng-card-button'));
+    expect(runnerNgCardButtonElem).toBeTruthy();
+    runnerNgCardButtonElem.nativeElement.click();
+    fixture.whenStable().then(() => {
+      expect(component.cardConfig.card.cardButton.cardButtonCallback).toHaveBeenCalled();
+    });
+  }));
 });
